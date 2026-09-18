@@ -1,0 +1,408 @@
+:root {
+    --main_font: "Charis SIL", serif
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main_font);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Universal button layout*/
+button {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    line-height: 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/*Makes the buttons and other interactables have animations*/
+button:hover, nav a:hover, .video-thumbnails:hover, .gallery-card:hover {
+    transform: translateY(-2px);
+}
+
+/*Click animation*/
+button:active, nav a:active, .video-thumbnails:active {
+  transform: translateY(1px);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*For the titles like News, Heroes, etc.*/
+.titlebar, footer h2 {
+    max-width: 572px;
+    font-family: var(--main_font);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: clamp(13px, 4vw, 25px);
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 0px;
+    background-image: linear-gradient(to right, #6071c0 0px, #6071C0 20px, #1058dd1f 20px, #1058dd1f 100%);
+}
+
+footer h2 {
+    font-size: clamp(13px, 4vw, 30px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*Setting background images*/
+#home {
+    background-image: url(../images/bg1.png);
+}
+
+#about-mlbb {
+    background-image: url(../images/bg2.png);
+}
+
+#features {
+    background-image: url(../images/bg3.png);
+}
+
+#heroes {
+    background-image: url(../images/bg4.png);
+}
+
+#news {
+    background-image: url(../images/bg5.png);
+}
+
+#gallery {
+    background-image: url(../images/bg6.png);
+}
+
+#videos {
+    background-image: url(../images/bg7.png);
+}
+
+#home, #about-mlbb, #features, #heroes, #news, #gallery, #videos, #play-card, #game-description {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Home header layout*/
+#home header, #home header nav {
+    background-color: #3e4d953d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home header {
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+#home header > img {
+    max-width: 100%;
+}
+
+/*Navigation link layout*/
+#home header nav {
+    font-size: clamp(16px, 4vw, 32px);
+    gap: 30px;
+    background: none;
+    flex: 1;
+    margin-left: 10%;
+    margin-right: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Homepage layout*/
+#home > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    padding-top: 20px;
+    gap: 50px;
+}
+
+#home > div img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Div where the play now is located*/
+#call-to-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+#install-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#play-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 22px;
+    background: #0D234080;
+    gap: 20%;
+    padding: 65px;
+    padding-top: 45px;
+    place-items: center;
+    align-items: center;
+}
+
+#play-card > img {
+    min-width: 300px;
+}
+
+/*Right side images on home*/
+#anniversary-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*What is MLBB section layout*/
+#about-mlbb > div {
+    display: flex;
+    padding: 5%;
+    padding-top: 0;
+    align-items: center;
+    gap: 40px;
+}
+
+#about-mlbb header {
+    padding: 2%;
+}
+
+#game-icon {
+    max-width: 100%;
+}
+
+#game-description {
+    text-align: justify;
+    padding: 25px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #3E4D953d;
+    border-radius: 22px;
+}
+#game-description h1 {
+    font-size: clamp(27px, 4vw, 54px);
+    text-align: center;
+}
+
+#game-description p {
+    font-family: "IBM Plex Sans Hebrew", sans-serif;
+    font-size: clamp(13px, 4vw, 25px);
+}
+
+/*Feature layout*/
+#features > div {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    place-items: center;
+    column-gap: 20px;
+}
+
+.feature-img {
+    margin: 20px;
+}
+
+/*Heroes layout*/
+#heroes > div {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.heroes-img, .feature-img, .other-news-img, .gallery-img, .video-thumbnails, #about img {
+    max-width: 100%;
+    height: auto;
+}
+
+.heroes-img {
+    min-width: 300px;
+}
+
+/*News Layout*/
+#news > div {
+    display: flex;
+    padding: 5%;
+    place-items: center;
+    gap: 50px;
+}
+
+#recent-update-img {
+    max-width: 100%;
+}
+
+#other-news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    place-items: center;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+/*Gallery layout*/
+#gallery > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5%;
+    gap: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    place-items: center;
+}
+
+.gallery-slot {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/*Gallery image focus animation*/
+.gallery-slot::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 999;
+    
+    opacity: 0;
+    pointer-events: none; 
+    
+    transition: opacity 0.4s ease;
+}
+
+.gallery-slot:has(.gallery-card:focus)::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gallery-card {
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-card:focus-within {
+    cursor: default;
+    pointer-events: none;
+}
+
+.gallery-card:focus {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.3);
+    height: 65vh;
+    width: auto;
+    aspect-ratio: 1 / 2;
+    z-index: 1000;
+}
+
+/*Videos layout*/
+#videos > div {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/*About footer layout*/
+#about {
+    background-color: #0c1f3754;
+}
+
+#about > div {
+    display: grid;
+    padding: 2%;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    place-items: center;
+}
+
+#about > div img {
+    min-width: 350px;
+    height: auto;
+}
+
+/*Layout for tablets*/
+@media (max-width: 1024px) {
+    #about-mlbb > div {
+        flex-direction: column;
+    }
+    #heroes > div {
+        flex-direction: column;
+    }
+    #news > div {
+        flex-direction: column                                                                                                                                    ;
+    }
+    #gallery > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    #videos > div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #about > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5%;
+    }
+
+}
+
+/*Layout for phones*/
+@media (max-width: 600px) {
+    #home header, #home header nav, #home > div, #about-mlbb > div, #heroes > div {
+        flex-direction: column;
+    }
+    #home header, #home header nav {
+        gap: 30px;
+    }
+    #features > div {
+        grid-template-columns: 1fr;
+    }
+    #gallery > div {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    #videos > div {
+        grid-template-columns: 1fr;
+    }   
+    #about > div {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+}
